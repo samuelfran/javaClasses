@@ -1,16 +1,12 @@
-package exercise;
+package exercises;
 import java.util.*;
 
 public class Agenda {
 	
-	ArrayList<Pessoa> agenda = new ArrayList <Pessoa>();
+ArrayList<Pessoa> agenda = new ArrayList <Pessoa>();
 	
 	public void armazenaPessoa (String nome, int idade, float altura){		
-		Pessoa person = new Pessoa();
-		
-		person.setNome (nome);
-		person.setIdade (idade);
-		person.setAltura (altura);
+		Pessoa person = new Pessoa (nome, idade, altura);
 		
 		agenda.add(person);
 	}
@@ -29,7 +25,7 @@ public class Agenda {
 		agenda.remove(buscaPessoa(nome));
 	}
 	
-	public void imprimePessoa (){
+	public void imprimeAgenda (){
 		if (agenda.size() < 0){
 			for (int i = 0; i < agenda.size(); i++){
 				System.out.println(agenda.get(i));
